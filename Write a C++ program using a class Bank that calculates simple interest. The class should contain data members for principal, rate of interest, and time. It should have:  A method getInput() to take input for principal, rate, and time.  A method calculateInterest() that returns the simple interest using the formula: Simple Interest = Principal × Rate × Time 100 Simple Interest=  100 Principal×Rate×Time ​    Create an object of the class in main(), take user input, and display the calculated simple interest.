@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+class Bank {
+public:
+    float principal, rate, time;
+
+    void getInput() {
+        cout << "Enter principal amount: ";
+        cin >> principal;
+        cout << "Enter rate of interest: ";
+        cin >> rate;
+        cout << "Enter time (in years): ";
+        cin >> time;
+    }
+
+    float calculateInterest() {
+        return (principal * rate * time) / 100;
+    }
+};
+
+int main() {
+    Bank b;
+    b.getInput();
+    cout << "Simple Interest: " << b.calculateInterest() << endl;
+    return 0;
+}
