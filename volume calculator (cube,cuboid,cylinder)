@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+class Volume {
+public:
+    void calc(int side) {
+        cout << "Volume of Cube: " << side * side * side << endl;
+    }
+    void calc(int l, int b, int h) {
+        cout << "Volume of Cuboid: " << l * b * h << endl;
+    }
+    void calc(double radius, int height) {
+        cout << "Volume of Cylinder: " << 3.1416 * radius * radius * height << endl;
+    }
+};
+
+int main() {
+    Volume v;
+    v.calc(4);
+    v.calc(4, 5, 6);
+    v.calc(3.5, 7);
+    return 0;
+}
