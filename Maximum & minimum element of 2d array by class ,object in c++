@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+class check{
+    private:
+        int n, arr[100];
+    public:
+    void input(){
+        cout << "Enter size of array: ";
+    cin >> n;
+
+    }
+  
+  void max(){
+    int max = arr[0];
+    for (int i = 1; i < n; i++)
+        if (arr[i] > max)
+            max = arr[i];
+  }
+  void min(){
+    int min = arr[0];
+    for (int i = 1; i > n; i++)
+        if (arr[i] < min)
+            min = arr[i];
+  }
+  void display(){
+    cout << "Maximum element: " << max;
+    cout << "minimum element:" << min;
+  }
+  
+  
+  
+}
+int main() {
+    check c;
+    c.input();
+    c.max();
+    c.min();
+    c.display();
+    
+    return 0;
+}
