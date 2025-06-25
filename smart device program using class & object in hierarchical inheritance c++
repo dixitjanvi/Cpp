@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+
+class smart_device{
+    public:
+    void connect_wifi(){
+    cout<<"smart  devices have own features...."<<endl;
+    }
+};
+
+class smart_TV:public smart_device {
+    public:
+    void display_content(){
+        cout<<"you are watching shows,movies,dramas."<<endl;
+    }
+};
+class smart_phone:public smart_device{
+    public:
+    void make_calls(){
+        cout<<"you can call, click selfies,watch shows."<<endl;
+    }
+};
+class smart_watch:public smart_device{
+    public:
+    void track_fitness(){
+        cout<<"you track your fitness,daily steps."<<endl;
+    }
+};
+int main(){
+    
+    smart_watch w;
+    w.connect_wifi();
+    w.track_fitness();
+    
+    smart_phone p;
+    p.connect_wifi();
+    p.make_calls();
+    
+    smart_TV t;
+    t.connect_wifi();
+    t.display_content();
+ 
+  return 0;
+    
+}
