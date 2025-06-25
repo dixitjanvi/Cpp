@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+class Employee {
+public:
+    string name;
+    void display() {
+        cout << "Employee name : " << name << endl;
+    }
+};
+
+class Manager : public Employee {
+public:
+    void manage() {
+        cout << "Managing team." << endl;
+    }
+};
+
+class Developer : public Employee {
+public:
+    void code() {
+        cout << "Writing code." << endl;
+    }
+};
+
+int main() {
+    Manager m;
+    m.name = "John";
+    Developer d;
+    d.name = "Jane";
+    m.display();
+    m.manage();
+    d.display();
+    d.code();
+    return 0;
+}
