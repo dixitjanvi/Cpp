@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+
+class sports {
+public:
+    void rules() {
+        cout << "General rules for all sports" << endl;
+        cout << "Wear proper uniform" << endl;
+        cout << "Follow the decisions of umpires" << endl;
+    }
+};
+
+class cricket : public sports {
+public:
+    int players;
+    string captain;
+    string vicecaptain;
+
+    void setdetails() {
+        players = 11;
+        captain = "Rohit Sharma";
+        vicecaptain = "Shubman Gill";
+    }
+
+    void show() {
+        cout << "Number of players: " << players << endl;
+        cout << "Captain is: " << captain << endl;
+        cout << "Vice Captain is: " << vicecaptain << endl;
+        cout << "Cricket follows extra rules like using bat, ball, etc." << endl;
+    }
+};
+
+int main() {
+    cricket c1;
+    c1.rules();
+    c1.setdetails();
+    c1.show();
+
+    return 0;
+}
