@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+
+int Add(int a, int b) {
+    return a + b;
+}
+
+float Add(double a, float b) {
+    return a + b;
+}
+
+int Add(float a, float b) {
+    return a + b;
+}
+
+int main() {
+    cout << "Add(int, int): " << Add(10, 12) << endl;        
+    cout << "Add(double, float): " << Add(10.7, 4.5f) << endl;     
+    cout << "Add(float, float): " << Add(9.5f, 6.7f) << endl; 
+
+    return 0;
+}
