@@ -1,0 +1,46 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class BankEmployee {
+private:
+    string name;
+    float salary;
+    int age;
+    long long accountNo;
+
+public:
+    // Constructor to initialize employee details
+    BankEmployee(string empName, float empSalary, int empAge, long long accNo) {
+        name = empName;
+        salary = empSalary;
+        age = empAge;
+        accountNo = accNo;
+    }
+
+    // Function to check name and print salary
+    void printSalaryByName(string searchName) {
+        if (searchName == name) {
+            cout << "Employee Name: " << name << endl;
+            cout << "Salary: " << salary << endl;
+        }
+    }
+};
+
+int main() {
+    // Creating 3 example employees
+    BankEmployee emp1("Amit", 50000.0, 30, 123456789012);
+    BankEmployee emp2("Janvi", 60000.0, 25, 123456789013);
+    BankEmployee emp3("Rahul", 55000.0, 28, 123456789014);
+
+    string inputName;
+    cout << "Enter employee name to get salary: ";
+    cin >> inputName;
+
+    // Check and display salary based on input
+    emp1.printSalaryByName(inputName);
+    emp2.printSalaryByName(inputName);
+    emp3.printSalaryByName(inputName);
+
+    return 0;
+}
