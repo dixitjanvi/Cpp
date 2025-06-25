@@ -1,0 +1,79 @@
+#include <iostream>
+using namespace std;
+
+class Person {
+public:
+    string name;
+    int age;
+
+    void getPersonDetails() {
+        cout << "Enter name: ";
+        cin >> name;
+        cout << "Enter age: ";
+        cin >> age;
+    }
+
+    void showPersonDetails() {
+        cout << "Name: " << name << "\nAge: " << age << endl;
+    }
+};
+
+Person (Single Inheritance)
+class Employee : public Person {
+public:
+    int empID;
+
+    void getEmployeeDetails() {
+        cout << "Enter Employee ID: ";
+        cin >> empID;
+    }
+
+    void showEmployeeDetails() {
+        cout << "Employee ID: " << empID << endl;
+    }
+
+class Salary {
+public:
+    float basicSalary;
+
+    void getSalaryDetails() {
+        cout << "Enter Basic Salary: ";
+        cin >> basicSalary;
+    }
+
+    void showSalaryDetails() {
+        cout << "Basic Salary: ₹" << basicSalary << endl;
+    }
+};
+
+class Manager : public Employee, public Salary {
+public:
+    string department;
+
+    void getManagerDetails() {
+        cout << "Enter Department: ";
+        cin >> department;
+    }
+
+    void showManagerDetails() {
+        cout << "Department: " << department << endl;
+    }
+};
+
+int main() {
+    Manager m;
+
+    cout << "Enter Manager Details:\n";
+    m.getPersonDetails();        
+    m.getEmployeeDetails();      
+    m.getSalaryDetails();       
+    m.getManagerDetails();       
+
+    cout << "\n--- Manager Information ---\n";
+    m.showPersonDetails();
+    m.showEmployeeDetails();
+    m.showSalaryDetails();
+    m.showManagerDetails();
+
+    return 0;
+}
