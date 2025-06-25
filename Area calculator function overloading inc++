@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+class AreaCalculator {
+ public:
+    void area(float r) {
+        cout << "Area of Circle is: " << 3.14 * r* r<< endl;
+    }
+
+    void area(float l, float b) {
+        cout << "Area of Rectangle is: " << l * b << endl;
+    }
+
+    void area(int s) {
+        cout << "Area of Square is: " << s * s << endl;
+    }
+
+    void area(double a) {
+        cout << "Surface Area of Cube is: " << 6 * a * a << endl;
+    }
+};
+
+int main() {
+    AreaCalculator a;
+    a.area(5.0f);
+    a.area(4.5f, 6.0f);
+    a.area(4);
+    a.area(3.0);
+    return 0;
+}
