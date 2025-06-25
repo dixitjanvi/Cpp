@@ -1,0 +1,73 @@
+#include <iostream>
+using namespace std;
+
+class student {
+public:
+    string name;
+    int roll_no;
+
+    void input() {
+        cout << "Enter the student name: ";
+        cin >> name;
+        cout << "Enter the roll number: ";
+        cin >> roll_no;
+    }
+
+    void display() {
+        cout << "Name: " << name << endl;
+        cout << "Roll No.: " << roll_no << endl;
+    }
+};
+
+class marks : public student {
+public:
+    int physics;
+    int maths;
+
+    void input_marks() {
+        cout << "Enter the marks of Physics: ";
+        cin >> physics;
+        cout << "Enter the marks of Mathematics: ";
+        cin >> maths;
+    }
+
+    void display_marks() {
+        cout << "Physics: " << physics << endl;
+        cout << "Maths: " << maths << endl;
+    }
+};
+
+class sports : public student {
+public:
+    string sport;
+
+    void input_sports() {
+        cout << "Enter your favourite sport: ";
+        cin >> sport;
+    }
+
+    void display_sports() {
+        cout << "Sport: " << sport << endl;
+    }
+};
+
+class result : public marks, public sports {
+public:
+    void display_result() {
+        int total = physics + maths;
+        marks::display();
+        display_marks();
+        display_sports();
+        cout << "Total Score: " << total << endl;
+    }
+};
+
+int main() {
+    result r;
+    r.marks::input();
+    r.input_marks();
+    r.input_sports();
+    r.display_result();
+
+    return 0;
+}
