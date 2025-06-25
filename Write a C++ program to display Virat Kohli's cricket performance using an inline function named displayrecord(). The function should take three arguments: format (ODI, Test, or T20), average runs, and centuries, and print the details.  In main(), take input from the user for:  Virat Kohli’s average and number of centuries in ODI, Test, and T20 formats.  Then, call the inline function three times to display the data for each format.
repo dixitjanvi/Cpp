@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+inline void displayrecord(string format,float avg,int cen)
+{
+    cout<<"Format: "<<format<<endl;
+    cout<<"Average: "<<avg<<endl;
+    cout<<"Centuries: "<<cen<<endl;
+}
+int main(){
+    float avgODI, avgTest, avgT20;
+    int cenODI, cenTest, cenT20;
+    cout<<"Enter virat kohli ODI average: ";
+    cin>>avgODI;
+    cout<<"Enter virat kohli ODI centuries: ";
+    cin>>cenODI;
+    cout<<"Enter virat kohli Test average: ";
+    cin>>avgTest;
+    cout<<"Enter virat kohli Test centuries: ";
+    cin>>cenTest;
+    cout<<"Enter virat kohli T20 average: ";
+    cin>>avgT20;
+    cout<<"Enter virat kohli T20 centuries:";
+    cin>>cenT20;
+
+    displayrecord("ODI",avgODI,cenODI);
+    displayrecord("Test",avgTest,cenTest);
+    displayrecord("T20",avgT20,cenT20);
+    return 0;
+}
