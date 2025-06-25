@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+class university{
+    public:
+    university(){
+    cout<<"university rules for admission"<<endl;
+    }
+};
+class Btech:public university{
+    public:
+    Btech(){
+     cout<<"passed out in 12th."<<endl;
+     cout<<"based on jee parcentile."<<endl;
+     cout<<"crack university own exam."<<endl;
+     cout<<"12th course is pcm."<<endl;
+    }
+};
+class BBA:public university{
+    public:
+    BBA(){
+     cout<<"12th course is commerce."<<endl;
+     cout<<"passed out in 12th."<<endl;
+    }
+};
+class MBA:public university{
+    public:
+    MBA(){
+     cout<<"you have bachelors degree."<<endl;
+    }
+};
+
+int main(){
+    MBA m;
+    BBA b;
+    Btech t;
+    
+return 0;
+}
