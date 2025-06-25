@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+class car{
+public:
+       void avarage(){
+          cout<<"This is a avarage car "<<endl;
+       }
+       void luxury(){
+          cout<<"this is a luxury car"<<endl;
+       }
+       void suv(){
+          cout<<"this is a SUV car"<<endl;
+       }
+};
+class alto:public car {
+public:
+    void avarage(){
+        cout<<"avarage "<<endl;
+    }
+    void luxury(){
+        cout<<"luxury "<<endl;
+    }
+    void suv(){
+        cout<<"SUV "<<endl;
+         
+    }
+};
+int main(){
+    alto a;
+    a.avarage();
+    a.luxury();
+    a.suv();
+    return 0;
+}
