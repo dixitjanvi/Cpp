@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+class base {
+public:
+   virtual void print(){
+          cout<<"This is a base class:"<<endl;
+    }
+};
+class derive:public base {
+public:
+    void print(){
+        base::print();
+          cout<<"This is a derive class:"<<endl;
+    }
+};
+int main(){
+    derive d;
+    d.print();
+    return 0;
+}
