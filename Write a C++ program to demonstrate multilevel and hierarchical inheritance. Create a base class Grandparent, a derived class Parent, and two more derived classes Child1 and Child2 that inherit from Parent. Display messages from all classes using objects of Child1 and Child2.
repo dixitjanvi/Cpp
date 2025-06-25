@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+class Grandparent {
+public:
+    void displayGrandparent() {
+        cout << "Grandparent class" << endl;
+    }
+};
+
+class Parent : public Grandparent {
+public:
+    void displayParent() {
+        cout << "Parent class" << endl;
+    }
+};
+
+class Child1 : public Parent {
+public:
+    void displayChild1() {
+        cout << "Child1 class" << endl;
+    }
+};
+
+class Child2 : public Parent {
+public:
+    void displayChild2() {
+        cout << "Child2 class" << endl;
+    }
+};
+
+int main() {
+    Child1 obj1;
+    Child2 obj2;
+    obj1.displayGrandparent();
+    obj1.displayParent();
+    obj1.displayChild1();
+    obj2.displayGrandparent();
+    obj2.displayParent();
+    obj2.displayChild2();
+    return 0;
+}
