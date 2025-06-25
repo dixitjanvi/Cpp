@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main()
+
+{
+    int a=2,b=4,c;
+    cout<<"a="<<a<<endl<<"b="<<b <<endl;
+    cout<<"after swapping"<<endl;
+    
+       c=a;
+       a=b;
+       b=c;
+       cout<<"a="<<a<<endl<<"b="<<b <<endl;
+    return 0;
+}
