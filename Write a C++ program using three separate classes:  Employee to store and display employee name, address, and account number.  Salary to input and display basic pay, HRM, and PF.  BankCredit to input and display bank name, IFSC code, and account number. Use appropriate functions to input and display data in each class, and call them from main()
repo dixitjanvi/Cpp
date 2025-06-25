@@ -1,0 +1,94 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+class Employee {
+private:
+    char name[20], address[30];
+    long long acc_no;
+
+public:
+    void input_emp_det() {
+        cout << "Enter employee name: ";
+        cin >> name;
+
+        cout << "Enter address: ";
+        cin >> address;
+
+        cout << "Enter account number: ";
+        cin >> acc_no;
+    }
+
+    void display_emp_det() {
+        cout << "\n--- Employee Details ---" << endl;
+        cout << "Name: " << name << endl;
+        cout << "Address: " << address << endl;
+        cout << "Account Number: " << acc_no << endl;
+    }
+};
+
+class Salary {
+private:
+    int basic_pay, hrm, pf;
+
+public:
+    void input_salary() {
+        cout << "\nEnter Basic Pay: ";
+        cin >> basic_pay;
+
+        cout << "Enter HRM: ";
+        cin >> hrm;
+
+        cout << "Enter PF: ";
+        cin >> pf;
+    }
+
+    void display_salary() {
+        cout << "\n--- Salary Details ---" << endl;
+        cout << "Basic Pay: " << basic_pay << endl;
+        cout << "HRM: " << hrm << endl;
+        cout << "PF: " << pf << endl;
+    }
+};
+
+class BankCredit {
+private:
+    char name[20];
+    long long acc_no;
+    char IFSC_code[20];
+
+public:
+    void input_bank_credit() {
+        cout << "\nEnter account holder name: ";
+        cin >> name;
+
+        cout << "Enter IFSC code: ";
+        cin >> IFSC_code;
+
+        cout << "Enter account number: ";
+        cin >> acc_no;
+    }
+
+    void display_bank_credit() {
+        cout << "\n--- Bank Credit Details ---" << endl;
+        cout << "Name: " << name << endl;
+        cout << "IFSC Code: " << IFSC_code << endl;
+        cout << "Account Number: " << acc_no << endl;
+    }
+};
+
+int main() {
+    Employee emp;
+    Salary sal;
+    BankCredit bank;
+
+    emp.input_emp_det();
+    sal.input_salary();
+    bank.input_bank_credit();
+
+    emp.display_emp_det();
+    sal.display_salary();
+    bank.display_bank_credit();
+
+    return 0;
+}
