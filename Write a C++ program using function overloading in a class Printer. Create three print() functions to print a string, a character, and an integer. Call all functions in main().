@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+class Printer {
+public:
+    void print(string s) {
+        cout << "String: " << s << endl;
+    }
+    void print(char c) {
+        cout << "Char: " << c << endl;
+    }
+    void print(int i) {
+        cout << "Integer: " << i << endl;
+    }
+};
+
+int main() {
+    Printer p;
+    p.print("Hello");
+    p.print('A');
+    p.print(100);
+    return 0;
+}
